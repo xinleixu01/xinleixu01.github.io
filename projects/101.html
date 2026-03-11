@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>城市情感意向模型构建</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container project-detail-page">
+    <header class="project-detail-header">
+      <h1>城市情感意向模型构建</h1>
+      <p class="subtitle">2022年大学生创新创业项目</p>
+      <p class="subtitle">使用Flickr平台的用户生成数据(UGC)构建北京市城市情感意向特征模型</p>
+    </header>
+    <main>
+      <p class="text-block">基于Python语言，结合Flickr网站免费提供的API，直接调用网站的方法爬取网站的照片信息，照片的唯一标识是照片的识别码，即PHOTO_ID将作为照片入库去重的唯一标识字段。</p>
+      <img src="../images/图片102.png" alt="项目图片1" class="detail-image">
+      
+      <p class="text-block">去重后得到照片数量及分布如图所示：</p>
+      <img src="../images/图片101.png" alt="项目图片2" class="detail-image">
+      
+      <p class="text-block">使用SpaSeD-Cluster得到如下北京市主要景点：</p>
+      <img src="../images/图片103.png" alt="项目图片3" class="detail-image">
+      
+      <p class="text-block">调用DeepSentiBank模型处理图片得到如下形容词+名词的组合，为后续的情绪意向模型构建打下基础</p>
+      <img src="../images/图片104.png" alt="项目图片4" class="detail-image image-large">
+      
+      <a href="../index.html#projects" class="back-link">返回主页</a>
+    </main>
+  </div>
+</body>
+</html>

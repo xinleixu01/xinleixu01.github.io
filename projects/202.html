@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI翻唱</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container project-detail-page">
+    <header class="project-detail-header">
+      <h1>AI翻唱</h1>
+      <p class="subtitle">独立完成基于深度学习的AI音频生成全流程开发，通过So-VITS-SVC模型成功将女声歌曲转换为高质量的男声翻唱作品</p>
+    </header>
+    <main>
+      <p class="text-block">(1)遵循高质量语音模型训练标准，采集并处理>20min目标纯净干声；使用UVR5等工具进行专业级人声分离与降噪；通过音频切片与文本校对构建标准化训练数据集，为模型训练奠定基础</p>
+      <p class="text-block">(2)在本地Windows环境部署So-VITS-SVC开源框架，并进行模型训练。通过调整学习率、训练轮数等关键参数，持续优化模型表现，最终生成高还原度的音色模</p>
+      <p class="text-block">(3)将分离后的干声输入训练完成的模型中进行推理，通过设置音高参数（-14 semitones）实现女声至男声的音色转换，并完成AI人声与伴奏轨的最终混音与导出，产出可直接发布的完整音乐作品</p>
+      <p class="text-block">将《不要忘记我爱你》这首歌的原唱声音，替换为了热门游戏《代号鸢》中角色——袁基的独特音色。</p>
+      <p class="text-block">您可以在下方直接欣赏这个AI翻唱作品。(注：这仅为技术展示和娱乐目的)</p>
+
+      <div class="video-container">
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1bTrtYTEsR&page=1&high_quality=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+      </div>
+
+      <a href="../index.html#projects" class="back-link">返回主页</a>
+    </main>
+  </div>
+</body>
+</html>
