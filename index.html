@@ -1,166 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>Xinlei Xu</title>
+  <title>个人网页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 引入样式文件 -->
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f7f8fa;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 24px;
-    }
-
-    header {
-      margin-bottom: 60px;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
-    section {
-      margin-bottom: 50px;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
-      border-bottom: 2px solid #e0e0e0;
-      display: inline-block;
-      padding-bottom: 4px;
-    }
-
-    ul {
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-
-    .links a {
-      display: inline-block;
-      margin-right: 16px;
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: 500;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 80px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div class="container">
 
-    <!-- Header -->
-    <header>
-      <h1>Xinlei Xu</h1>
-      <div class="subtitle">
-        Graduate Student · Data / Tech-Oriented Roles
-      </div>
+    <!-- 第一屏 -->
+    <header class="hero">
+        <div class="hero-image">
+            <img src="我的照片.jpg" alt="我的照片" class="profile-pic">
+        </div>
+        <div class="hero-text">
+            <h1>你好, 我是徐欣蕾👋</h1>
+           <p class="subtitle">
+            GIS 背景，关注 AI、数据分析与数字产品设计<br>
+            希望用技术构建有价值的产品
+           </p>
+           <div class="hero-tags">
+            <span>AI</span>
+            <span>GIS</span>
+            <span>Data</span>
+            <span>Product</span>
+          </div>
+            <div class="contact-info">
+                <span class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="contact-icon" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    深圳/香港
+                </span>
+                <a href="mailto:xinleixuzz@gmail.com" class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="contact-icon" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.803V4.697l-5.803 3.558z"/>
+                    </svg>
+                    xinleixuzz@gmail.com
+                </a>
+            </div>
+        </div>
     </header>
 
-    <!-- About -->
-    <section>
-      <h2>About Me</h2>
-      <div class="card">
-        <p>
-          I am a graduate student with a strong background in data analysis, spatial information systems,
-          and programming. I am currently exploring career opportunities in data-driven, technical, or
-          analytical roles, and I enjoy learning new technologies quickly.
-        </p>
+    <nav class="main-nav">
+      <a href="#about">关于我</a>
+      <a href="#projects">项目经历</a>
+      <a href="#skills">技能</a>
+
+    </nav>
+
+    <section id="about" class="fade-in-section">
+      <h2>✨ 关于我</h2>
+      <div class="about-grid">
+        <!-- 左侧信息 -->
+        <div class="card about-info">
+          <h3>基本信息</h3>
+          <ul class="info-list">
+            <li>
+              <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+              <span><strong>硕士:</strong> 香港中文大学</span>
+            </li>
+            <li>
+              <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+              <span><strong>学士:</strong> 武汉大学</span>
+            </li>
+            <li>
+              <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+              <span><strong>专业:</strong> 地理信息科学 (GIS)</span>
+            </li>
+            <li>
+              <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 2v4M8 2v4M2 11h20"/></svg></span>
+              <span><strong>生日:</strong> 2003年6月</span>
+            </li>
+            <li>
+              <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span><strong>城市:</strong> 深圳 / 香港</span>
+            </li>
+            <li>
+              <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+              <span><strong>邮箱:</strong> <a href="mailto:xinleixuzz@gmail.com">xinleixuzz@gmail.com</a></span>
+            </li>
+          </ul>
+        </div>
+        <!-- 右侧动态 -->
+        <div class="card about-now">
+          <div class="scrollable-content">
+            <h3>🚀 Doing now</h3>
+            <ul class="info-list">
+              <li>开发「今天吃什么」餐厅推荐工具，通过定位、筛选、随机筛选和AI辅助推荐帮助用户快速选择餐厅</li>
+              <li>准备毕业论文，探索多个城市的CityWalk的空间路径和情感意象</li>
+              <li>寻找深圳/广州/香港的实习/工作机会</li>
+            </ul>
+            <h3 class="done-title">✅ Done</h3>
+            <ul class="info-list done-list">
+              <li>2025年9月就读于香港中文大学</li>
+              <li>2025年7月-2025年6月于武汉大学资源与环境科学学院担任科研助理</li>
+              <li>2024年6月毕业于武汉大学</li>
+              <li>2023年9月于武汉水利监测站实习</li>
+              <li>2023年7月参加荷兰鹿特丹大学IHS暑期学校</li>
+              <li>2020年9月就读于武汉大学</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section>
-      <h2>Skills</h2>
-      <div class="card">
-        <ul>
-          <li>Programming: Python, R, SQL (basic), JavaScript (basic)</li>
-          <li>Data Analysis & Visualization</li>
-          <li>GIS & Spatial Analysis</li>
-          <li>Machine Learning (introductory level)</li>
-          <li>Git & Version Control</li>
-        </ul>
+    <section id="projects" class="fade-in-section">
+      <h2>💼 项目经历</h2>
+      
+      <h3>学校项目</h3>
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <img src="images/图片101.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>城市情感意向模型构建</h4>
+            <p>使用Flickr平台的用户生成数据(UGC)构建北京市城市情感意向特征模型，主要负责使用python爬取Flickr平台的数据和图片的意象提取，并协助景点聚类</p>
+            <div class="project-buttons">
+              <a href="projects/101.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <img src="images/图片204.jpg" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>基于社区通报数据的武汉市第一轮新冠疫情分析</h4>
+            <p>科研训练项目，主要负责社区地理编码以及后续的风险区域聚类，第三作者</p>
+            <div class="project-buttons">
+              <a href="projects/102.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <img src="images/图片301.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>基于夜间灯光数据的中国城市发展及不平等性研究</h4>
+            <p>毕业论文衍生项目，主要负责人，主要完成栅格数据的空间聚合以及夜间灯光基尼系数的计算、人均夜间灯光指标计算以及制图</p>
+            <div class="project-buttons">
+              <a href="projects/103.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <img src="images/402.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>QGIS插件开发</h4>
+            <p>针对QGIS原生功能仅支持point-to-layer等模式且缺乏批量能力，基于Dijkstra算法构建矢量网络分析流程，实现layer-to-layer批量最短路径分析插件的开发</p>
+            <div class="project-buttons">
+              <a href="projects/104.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 5 -->
+        <div class="project-card">
+          <img src="images/503.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>面向多源遥感影像的无缝植被指数产品生产</h4>
+            <p>科研助理协助项目，参与算法实现、调试、参数检验以及产品生产</p>
+            <div class="project-buttons">
+              <a href="projects/105.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 6 -->
+        <div class="project-card">
+          <img src="images/图片604.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>基于深度学习的城市功能区识别</h4>
+            <p>硕士期间小组作业，主要负责多源数据的获取(包括地理数据下载以及百度地图POI获取)，协助小组成员完成深度学习部分</p>
+            <div class="project-buttons">
+              <a href="projects/106.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="personal-projects-title">个人项目</h3>
+      <div class="projects-grid">
+        <!-- Personal Project Card 1 -->
+        <div class="project-card">
+          <img src="images/301.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>「今天吃什么」</h4>
+            <p>结合LLM和高德地图API设计并开发app「今天吃什么」</p>
+            <div class="project-buttons">
+              <a href="projects/201.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
+        <!-- Personal Project Card 2 -->
+        <div class="project-card">
+          <img src="images/201.png" alt="Project Image" class="project-image">
+          <div class="project-content">
+            <h4>AI翻唱</h4>
+            <p>利用人工智能技术，将一首歌的声音替换为另一位歌手的音色</p>
+            <div class="project-buttons">
+              <a href="projects/202.html" class="project-btn">详情</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section>
-      <h2>Projects</h2>
-      <div class="card">
-        <ul>
-          <li>
-            <strong>Urban Development Analysis</strong> – Data-driven analysis project using large-scale spatial datasets.
-          </li>
-          <li>
-            <strong>Image-Based Feature Extraction</strong> – Applied machine learning techniques to visual data.
-          </li>
-          <li>
-            <strong>Academic Research Projects</strong> – Experience in data preprocessing, analysis, and reporting.
-          </li>
-        </ul>
+    <section id="skills" class="fade-in-section">
+      <h2>🛠️ 技能</h2>
+      <div class="skills-grid">
+        <!-- Language Card -->
+        <div class="card">
+          <h3>语言</h3>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>中文</span>
+              <span>Native</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="--progress-width: 100%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>English</span>
+              <span>日常会话及听阅能力</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="--progress-width: 70%;"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-info">
+              <span>粤语</span>
+              <span>能听懂简单交流</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="--progress-width: 30%;"></div>
+            </div>
+          </div>
+        </div>
+        <!-- IT Skills Card -->
+        <div class="card">
+          <h3>IT能力</h3>
+          <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">机器学习</span>
+          </div>
+        </div>
+        <!-- GIS Skills Card -->
+        <div class="card">
+          <h3>GIS专业技能</h3>
+          <div class="skills-container">
+            <span class="skill-tag">ArcGIS</span>
+            <span class="skill-tag">ENVI</span>
+            <span class="skill-tag">QGIS</span>
+            <span class="skill-tag">Google Earth Engine</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Links -->
-    <section>
-      <h2>Links</h2>
-      <div class="card links">
-        <a href="https://github.com/xinleixu01" target="_blank">GitHub</a>
-        <!-- 你之后可以加 -->
-        <!-- <a href="CV.pdf" target="_blank">CV</a> -->
-        <!-- <a href="https://linkedin.com/in/xxx" target="_blank">LinkedIn</a> -->
-      </div>
-    </section>
+
 
     <footer>
-      © 2026 Xinlei Xu · Built with GitHub Pages
+      © 2026 你的名字 · All Rights Reserved
     </footer>
 
   </div>
+  
+  <!-- 引入脚本文件 -->
+  <script src="script.js"></script>
 </body>
 </html>
