@@ -1,0 +1,403 @@
+/* Global Styles & Theme */
+:root {
+    --primary-color: #FF7043; /* A warm, appetizing orange */
+    --light-primary-color: #FFF2E0;
+    --secondary-color: #424242; /* Dark gray for text */
+    --background-color: #FDFDFD;
+    --card-background: #FFFFFF;
+    --border-color: #E0E0E0;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-weight: 500;
+    /* border-left: 4px solid var(--primary-color); */
+    /* padding-left: 10px; */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 5px;
+}
+
+#addressInput {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    padding: 10px;
+}
+
+.locBtn, .searchBtn {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s;
+}
+.locBtn:active, .searchBtn:active {
+    transform: scale(0.9);
+}
+
+/* Autocomplete Tips */
+#tips {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    margin-top: 8px;
+    box-shadow: var(--shadow);
+}
+.tipItem {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+.tipItem:last-child {
+    border-bottom: none;
+}
+.tipItem:hover {
+    background-color: #f5f5f5;
+}
+
+/* Filters */
+#typeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#typeContainer label {
+    display: block;
+}
+
+#typeContainer input[type="checkbox"] {
+    display: none; /* Hide original checkbox */
+}
+
+#typeContainer input[type="checkbox"] + span {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+#typeContainer input[type="checkbox"]:checked + span {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.radius-filter {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radius-filter label {
+    font-weight: 500;
+}
+
+select#radiusSelect, input#customRadiusInput {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    font-family: var(--font-family);
+    font-size: 14px;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.actions button {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--light-primary-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background-color 0.2s;
+}
+
+.actions button:active {
+    background-color: #FFDAB9;
+}
+
+/* AI Interactive Area */
+.ai-interactive-area {
+    margin-top: 20px;
+    background-color: var(--light-primary-color);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+#ai-prompt-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.ai-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.ai-buttons button {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.ai-buttons button:active {
+    opacity: 0.8;
+}
+
+
+/* Results */
+#result, #ai-advice {
+    margin-top: 15px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid transparent;
+    transition: border-left-color 0.3s;
+    position: relative; /* For positioning nav button */
+}
+
+.nav-btn {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    color: #888; /* Grey as default */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.nav-btn svg {
+    width: 22px;
+    height: 22px;
+}
+.nav-btn:hover {
+    transform: scale(1.15);
+    color: var(--primary-color); /* Orange on hover */
+}
+
+.card:hover {
+    border-left-color: var(--primary-color);
+}
+
+.card .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    padding-right: 40px; /* Space for nav button */
+}
+
+.card .info {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.6;
+    margin-bottom: 4px;
+    min-height: 22px; /* Placeholder height */
+}
+.card .info span {
+    margin-right: 12px;
+}
+
+.card .address {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.6;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #888; /* Grey as default */
+    transition: color 0.2s;
+}
+
+.copy-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.copy-btn:hover {
+    color: var(--primary-color); /* Orange on hover */
+}
+
+.card div:not(.name) {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.6;
+}
+
+.card .reason {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+    color: #555;
+    font-size: 14px;
+}
+
+.card.ai-recommendation {
+    background-color: var(--light-primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.card.error-card {
+    background-color: #FFF3F3;
+    border: 1px solid #F56C6C;
+    color: #F56C6C;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+}
+.modal-close:hover {
+    color: #333;
+}
+
+#random-card-container .card {
+    margin-bottom: 0; /* Only one card, so no margin needed */
+}
+
+.modal-refresh-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.modal-refresh-btn:active {
+    background-color: #E65100; /* Darker orange */
+}

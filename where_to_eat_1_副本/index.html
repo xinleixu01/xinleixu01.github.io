@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>今天吃什么</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>今天吃什么？</h1>
+
+        <div class="main-controls">
+            <div class="search-wrapper">
+                <button class="locBtn" onclick="locateMe()">📍</button>
+                <input id="addressInput" placeholder="输入地址或地点..." oninput="autoComplete()"/>
+                <button class="searchBtn" onclick="startSearch()">🔍</button>
+            </div>
+             <div id="tips"></div>
+        </div>
+
+        <div class="filters">
+            <h2>美食探索</h2>
+            <div id="typeContainer"></div>
+            
+            <div class="radius-filter">
+                <label for="radiusSelect">距离范围</label>
+                <select id="radiusSelect" onchange="toggleCustomRadius(this)">
+                    <option value="500" selected>500m</option>
+                    <option value="1000">1km</option>
+                    <option value="2000">2km</option>
+                    <option value="5000">5km</option>
+                    <option value="custom">自定义</option>
+                </select>
+                <input type="number" id="customRadiusInput" style="display:none;" placeholder="米">
+            </div>
+        </div>
+
+        <div class="actions">
+            <button onclick="randomPick()">🎲 随机选一家</button>
+            <button onclick="getAIAdvice()">🤖 AI决策助手</button>
+            <button onclick="getAIAdvice(true)">🔄 换一批</button>
+        </div>
+        
+        <div class="ai-interactive-area">
+             <input id="ai-prompt-input" placeholder="想吃点特别的？比如 '辣一点，有停车位' ...">
+             <div class="ai-buttons">
+                <button onclick="getAIRecommendations()">✅ 提交</button>
+                <button onclick="getAIRecommendations(true)">🔄 换一批</button>
+             </div>
+        </div>
+
+        <div id="ai-advice"></div>
+
+        <div class="results-header">
+            <h2>附近的餐厅</h2>
+        </div>
+        <div id="result">
+            等待定位或输入地址...
+        </div>
+    </div>
+
+    <!-- 随机餐厅弹出卡片 -->
+    <div id="random-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeRandomModal()">&times;</span>
+            <h2>就是它了！</h2>
+            <div id="random-card-container"></div>
+            <button class="modal-refresh-btn" onclick="randomPick()">换一家</button>
+        </div>
+
+    
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
